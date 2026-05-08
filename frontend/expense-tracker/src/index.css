@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Inter", "sans-serif";
+  --breakpoint-3xl: 1920px;
+
+  /* Design System Colors */
+  --color-primary: #0EA5E9;
+  --color-primary-light: #7DD3FC;
+  --color-bg: #F8F9FB;
+  --color-card: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-success: #1FB6D5;
+  --color-danger: #EF4444;
+  --color-orange: #169CB8;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F9FB;
+    color: #111827;
+    overflow-x: hidden;
+  }
+
+  /* Smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F3F4F6;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+  }
+
+  /* Date input styling */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  /* Number input — hide spin buttons */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
